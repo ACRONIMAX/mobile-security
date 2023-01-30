@@ -1,7 +1,8 @@
-![](https://img.freepik.com/free-photo/smart-car-security-unlock-via-smartphone-digital-remix_53876-104933.jpg?w=2000&t=st=1674959085~exp=1674959685~hmac=b62ce5406222832be7dbba97c67d4a924409fed2d2ab2802f2f0d6712b1faa9d)
-# Mobile Security
+![Cover Image](https://img.freepik.com/free-photo/smart-car-security-unlock-via-smartphone-digital-remix_53876-104933.jpg?w=2000&t=st=1674959085~exp=1674959685~hmac=b62ce5406222832be7dbba97c67d4a924409fed2d2ab2802f2f0d6712b1faa9d)
 
-Security is a huge term to discuss, but in this litle blog. We bring you some ideas than you can use to improve your security when build apps with the **Ionic Framework**, **React Native** or just **Native App**
+## Build More Secure Mobile Apps
+
+Security is a very important term to discuss, but in this little blog based on my experience, I hope to help you build more secure apps or just add some security layers when building apps with the **Ionic Framework**, **React Native** or just **Native App**
 
 Before we begin you must back-up your project in case you need to roll back any change you did it. Keep in mind that some tips are just for a specific framework and others can be shared.
 
@@ -45,7 +46,7 @@ In this case the **Reverse Engineer** is used to verify if yor code is optimized
 
 ## Framework or Library
 
-![](https://upload.wikimedia.org/wikipedia/commons/d/d1/Ionic_Logo.svg)
+![Ionic Logo](https://upload.wikimedia.org/wikipedia/commons/d/d1/Ionic_Logo.svg)
 
 For android **apk** or **abb** we use a file than you may now familiar the **build.gradle** and **proguard-rules.pro**
 
