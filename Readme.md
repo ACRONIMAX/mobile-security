@@ -1,7 +1,7 @@
 ![](https://img.freepik.com/free-photo/smart-car-security-unlock-via-smartphone-digital-remix_53876-104933.jpg?w=2000&t=st=1674959085~exp=1674959685~hmac=b62ce5406222832be7dbba97c67d4a924409fed2d2ab2802f2f0d6712b1faa9d)
-# Some layers of security to your Mobile Apps
+# Mobile Security
 
-security is a huge term to discuss, but in this litle blog. We bring you some ideas than you can use to improve some security when build apps with the **Ionic Framework**, **React Native** or just **Native App**
+Security is a huge term to discuss, but in this litle blog. We bring you some ideas than you can use to improve your security when build apps with the **Ionic Framework**, **React Native** or just **Native App**
 
 Before we begin you must back-up your project in case you need to roll back any change you did it. Keep in mind that some tips are just for a specific framework and others can be shared.
 
@@ -9,16 +9,17 @@ Before we begin you must back-up your project in case you need to roll back any 
 ## Content
 
 - [Reverse Engineer](#Reverse-Engineer)
-    - Reverse an Apk (Global)
-- Android Settings
-    - Obfuscation (Ionic)
-    - Obfuscation Rules (Ionic)
-    - Rooted Device Checking (Ionic)
-    - Prevent Screenshot | Screenrecord (Global)
-    - Inapropied Usege Of The Platform (Global)
-- iOS Settings
-    - Prevent Insecure Conextions (Global)
-    - Detect Jailbrek Phone (Ionic)
+    - [Reverse an Apk](#Reverse-an-Apk)
+- [Framework or Library](#Framework-or-Library)
+    - [Ionic Obfuscation](#Ionic-Obfuscation)
+    - [Ionic Obfuscation Rules](#Ionic-Obfuscation-Rules)
+    - [Ionic Rooted Device Checking](#Ionic-Rooted-Device-Checking)
+    - [Ionic Detect Jailbrek Phone](#Ionic-Detect-Jailbrek-Phone)
+- [Android Settings](#Android-Settings)
+    - [Prevent Screenshot | Screenrecord](#Prevent-Screenshot-|-Screenrecord)
+    - [Inapropied Usege Of The Platform](#Inapropied-Usege-Of-The-Platform)
+- [iOS Settings](#iOS-Settings)
+    - [Prevent Insecure Conextions](#Prevent-Insecure-Conextions)
 
 
 ## Reverse Engineer
@@ -42,13 +43,14 @@ In this case the **Reverse Engineer** is used to verify if yor code is optimized
 > If get some problem on these steps, you can check [this](https://medium.com/helpshift-engineering/reverse-engineer-your-favorite-android-app-863a797042a6) or any other **Reverse an Apk** tutorial.
 
 
+## Framework or Library
 
-## Android Settings
+![](https://upload.wikimedia.org/wikipedia/commons/d/d1/Ionic_Logo.svg)
 
 For android **apk** or **abb** we use a file than you may now familiar the **build.gradle** and **proguard-rules.pro**
 
 
-#### Obfuscation
+#### Ionic Obfuscation
 
 To obfuscate go to the **build.gradle** file and enable the propertie **minifyEnabled** to true, like this:
 
@@ -59,7 +61,8 @@ release {
 }
 ```
 
-#### Obfuscation Rules
+
+#### Ionic Obfuscation Rules
 
 After this, add below lines in **proguard-rules.pro** file
 
@@ -159,12 +162,20 @@ After this, add below lines in **proguard-rules.pro** file
 >Remember to check if any other package you use in your project, have some notes about another rules you must need to add. Because use the **proguard-rules.pro** may broke your app if you don't pay attention or omit those rules the autor of the packages give you.
 
 
-#### Rooted Device Checking
+#### Ionic Rooted Device Checking
 
 You can alchive these by using the **Diagnostic Plugin** to check if the device is rooted. keep in mind that have many other functions if you want to check it.
 
-[Cordova Diagnostic Plugin](https://github.com/dpa99c/cordova-diagnostic-plugin#isdevicerooted)
+:package: [Cordova Diagnostic Plugin](https://github.com/dpa99c/cordova-diagnostic-plugin#isdevicerooted)
 
+
+#### Ionic Detect Jailbrek Phone
+
+Another layer will be to use some library to check if your app is launch on insecure OS like Jailbreak. I found this library to help checking the **Jailbreak**, check the documentation to set up.
+
+:package: [Jailbreak/Root Detection Plugin for Apache Cordova](https://github.com/WuglyakBolgoink/cordova-plugin-iroot)
+
+## Android Settings
 
 #### Prevent Screenshot | Screenrecord
 
@@ -194,7 +205,7 @@ you can read more about this on the oficial [documentation](https://developer.an
 On iOS because is a roubust ecosistem the same OS give you some layer of security, but these doen't mean is 100% secure.
 for that reason we add some settings that may help to secure more you app.
 
-go to the infol and add these lines to
+go to the **Info.plist** and add these lines to
 
 #### Prevent Insecure Conextions
 
@@ -206,12 +217,5 @@ go to the infol and add these lines to
 </dict>
 ```
 
-another layer will be to use some library to check if your app is in a insecure OS like Jailbreak.
-
-#### Detect Jailbrek Phone
-
-i found this library to help checking the **Jailbreak**, check the documentation to set up.
-
-[Jailbreak/Root Detection Plugin for Apache Cordova](https://github.com/WuglyakBolgoink/cordova-plugin-iroot)
 
 I Hope this couples of tips help you with your goals  and i will continue adding more :partying_face:
