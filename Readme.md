@@ -7,8 +7,6 @@ Before we begin you must back-up your project in case you need to roll back any 
 
 ## Content
 
-- [Reverse Engineer](#Reverse-Engineer)
-    - [Reverse an Apk](#Reverse-an-Apk)
 - [Framework or Library](#Framework-or-Library)
     - [Ionic Obfuscation](#Ionic-Obfuscation)
     - [Ionic Obfuscation Rules](#Ionic-Obfuscation-Rules)
@@ -19,27 +17,8 @@ Before we begin you must back-up your project in case you need to roll back any 
     - [Inapropied Usege Of The Platform](#Inapropied-Usege-Of-The-Platform)
 - [iOS Settings](#iOS-Settings)
     - [Prevent Insecure Conextions](#Prevent-Insecure-Conextions)
-
-
-## Reverse Engineer
-
-In this case the **Reverse Engineer** is used to verify if yor code is optimized and compress but you can use to whatever purpose you need it, check malisius code, analize apps or just for fun.
-
-
-### Reverse an Apk
-
-1. Rename your **.apk** file and add **.zip** at the end.
-2. Extract the content, when you extract your will have all the code, classes and many other things.
-3. Download the Tool **dex2jar** and place in the same folder you extract the **apk** [link](https://github.com/DexPatcher/dex2jar/releases)
-4. Run the following command on your terminal
-    ```bash
-    d2j-dex2jar.bat classes.dex
-    ```
-5. Download the tool **Java Decompiler** [link](https://java-decompiler.github.io/)
-6. Last but not least, open the previous download program **Java Decompiler** and open the file located on the extracted apk folder **classes-dex2jar.jar**. If you see your code minified :party: you got it! the obfuscation process was success.
-[Example of obfuscation](https://www.preemptive.com/wp-content/uploads/2020/10/Rename-Obfuscation-Example.png)
-
-> If get some problem on these steps, you can check [this](https://medium.com/helpshift-engineering/reverse-engineer-your-favorite-android-app-863a797042a6) or any other **Reverse an Apk** tutorial.
+- [Reverse Engineer](#Reverse-Engineer)
+    - [Reverse an Apk](#Reverse-an-Apk)
 
 
 ## Framework or Library
@@ -215,6 +194,27 @@ go to the **Info.plist** and add these lines to
 	<false/>
 </dict>
 ```
+
+
+## Reverse Engineer
+
+In this case the **Reverse Engineer** is used to verify if yor code is optimized and compress but you can use to whatever purpose you need it, check malisius code, analize apps or just for fun.
+
+
+### Reverse an Apk
+
+1. Rename your **.apk** file and add **.zip** at the end.
+2. Extract the content, when you extract your will have all the code, classes and many other things.
+3. Download the Tool **dex2jar** and place in the same folder you extract the **apk** [link](https://github.com/DexPatcher/dex2jar/releases)
+4. Run the following command on your terminal
+    ```bash
+    d2j-dex2jar.bat classes.dex
+    ```
+5. Download the tool **Java Decompiler** [link](https://java-decompiler.github.io/)
+6. Last but not least, open the previous download program **Java Decompiler** and open the file located on the extracted apk folder **classes-dex2jar.jar**. If you see your code minified :party: you got it! the obfuscation process was success.
+[Example of obfuscation](https://www.preemptive.com/wp-content/uploads/2020/10/Rename-Obfuscation-Example.png)
+
+> If get some problem on these steps, you can check [this](https://medium.com/helpshift-engineering/reverse-engineer-your-favorite-android-app-863a797042a6) or any other **Reverse an Apk** tutorial.
 
 
 I Hope this couples of tips help you with your goals  and i will continue adding more :partying_face: :memo: [source](https://github.com/ACRONIMAX/mobile-security)
