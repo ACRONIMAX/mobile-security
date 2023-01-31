@@ -1,6 +1,4 @@
-![Cover Image](https://img.freepik.com/free-photo/smart-car-security-unlock-via-smartphone-digital-remix_53876-104933.jpg?w=2000&t=st=1674959085~exp=1674959685~hmac=b62ce5406222832be7dbba97c67d4a924409fed2d2ab2802f2f0d6712b1faa9d)
-
-## Build More Secure Mobile Apps
+## Add security when build mobile apps
 
 Security is a very important term to discuss, but in this little blog based on my experience, I hope to help you build more secure apps or just add some security layers when building apps with the **Ionic Framework**, **React Native** or just **Native App**
 
@@ -28,7 +26,7 @@ Before we begin you must back-up your project in case you need to roll back any 
 In this case the **Reverse Engineer** is used to verify if yor code is optimized and compress but you can use to whatever purpose you need it, check malisius code, analize apps or just for fun.
 
 
-#### Reverse an Apk
+### Reverse an Apk
 
 1. Rename your **.apk** file and add **.zip** at the end.
 2. Extract the content, when you extract your will have all the code, classes and many other things.
@@ -51,7 +49,7 @@ In this case the **Reverse Engineer** is used to verify if yor code is optimized
 For android **apk** or **abb** we use a file than you may now familiar the **build.gradle** and **proguard-rules.pro**
 
 
-#### Ionic Obfuscation
+### Ionic Obfuscation
 
 To obfuscate go to the **build.gradle** file and enable the propertie **minifyEnabled** to true, like this:
 
@@ -63,7 +61,7 @@ release {
 ```
 
 
-#### Ionic Obfuscation Rules
+### Ionic Obfuscation Rules
 
 After this, add below lines in **proguard-rules.pro** file
 
@@ -163,14 +161,14 @@ After this, add below lines in **proguard-rules.pro** file
 >Remember to check if any other package you use in your project, have some notes about another rules you must need to add. Because use the **proguard-rules.pro** may broke your app if you don't pay attention or omit those rules the autor of the packages give you.
 
 
-#### Ionic Rooted Device Checking
+### Ionic Rooted Device Checking
 
 You can alchive these by using the **Diagnostic Plugin** to check if the device is rooted. keep in mind that have many other functions if you want to check it.
 
 :package: [Cordova Diagnostic Plugin](https://github.com/dpa99c/cordova-diagnostic-plugin#isdevicerooted)
 
 
-#### Ionic Detect Jailbrek Phone
+### Ionic Detect Jailbrek Phone
 
 Another layer will be to use some library to check if your app is launch on insecure OS like Jailbreak. I found this library to help checking the **Jailbreak**, check the documentation to set up.
 
@@ -178,7 +176,7 @@ Another layer will be to use some library to check if your app is launch on inse
 
 ## Android Settings
 
-#### Prevent Screenshot | Screenrecord
+### Prevent Screenshot | Screenrecord
 
 For screenshots or screenrecord disable you must need to import the **WindowManager** and add this line to the **MainActivity** file
 ```bash
@@ -189,7 +187,7 @@ getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.Layou
 ```
 
 
-#### Inapropied Usege Of The Platform
+### Inapropied Usege Of The Platform
 
 If your app wont be doing larger procesing or need much RAM you must need to delete these propertie from your **AndroidManifest.xml**, you should use it only when you know exactly where all your memory is being allocated and why it must be retained.
 ```bash
@@ -208,7 +206,7 @@ for that reason we add some settings that may help to secure more you app.
 
 go to the **Info.plist** and add these lines to
 
-#### Prevent Insecure Conextions
+### Prevent Insecure Conextions
 
 ```bash
 <key>NSAppTransportSecurity</key>
@@ -219,4 +217,4 @@ go to the **Info.plist** and add these lines to
 ```
 
 
-I Hope this couples of tips help you with your goals  and i will continue adding more :partying_face:
+I Hope this couples of tips help you with your goals  and i will continue adding more :partying_face: :memo: [source](https://github.com/ACRONIMAX/mobile-security)
